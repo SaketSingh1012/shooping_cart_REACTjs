@@ -38,56 +38,73 @@
   align-items: center;
 }
 
-.mens_outwear_img {
-  background-image: url("../assets/mens_outerwear.jpg");
+.img_common {
+  display: block;
   background-repeat: no-repeat;
   background-position: center;
   height: 50vh;
   width: 100%;
+}
+
+.mens_outwear_img {
+  background-image: url("../assets/mens_outerwear.jpg");
 }
 
 .ladies_outwear_img {
   background-image: url("../assets/ladies_outerwear.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 50vh;
+}
+
+.t-shirt {
+  display: flex;
+  flex-direction: row;
+  height: 70vh;
   width: 100%;
 }
 
-.t-shirt{
-    display: flex;
-    flex-direction: row;
-    height: 70vh;
-    width: 100%;
+.mens_t-shirt_img {
+  background-image: url("../assets/mens_tshirts.jpg");
 }
 
-.mens_t-shirt_img
-{
-    background-image: url('../assets/mens_tshirts.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 50vh;
-    width: 100%;
-}
-
-.ladies_t-shirt_img{
-    background-image: url('../assets/ladies_tshirts.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 50vh;
-    width: 100%;
+.ladies_t-shirt_img {
+  background-image: url("../assets/ladies_tshirts.jpg");
 }
 
 .link {
   text-decoration: none;
-  color: black; /* Set the default color for links */
-  margin-right: 20px; /* Adjust as needed */
+  color: black;
+  margin-right: 20px;
 }
 
 .link:hover {
-  color: grey; /* Set the color for links on hover */
+  color: grey;
 }
 
 .activeLink {
-  border-bottom: 2px solid black; /* Add a line below the active link */
+  border-bottom: 2px solid black;
+}
+
+@media (max-width: 900px) {
+  .Home_Head {
+    margin: 0;
+    margin-top: 1rem;
+  }
+  .Home_navbar {
+    font-size: 0.5rem;
+    font-weight: bolder;
+    justify-content: space-between;
+    padding-left: 25%;
+  }
+
+  .outwear {
+    height: 50vh;
+    font-size: 1.5rem;
+  }
+  .img_common {
+    height: 30vh;
+  }
+  .outwear button {
+    padding: 15px 50px;
+  }
+}
+@media (max-width: 764px) {
 }

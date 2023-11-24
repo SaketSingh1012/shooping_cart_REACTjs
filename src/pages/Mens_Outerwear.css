@@ -62,21 +62,29 @@
 .mens_outwear_img15 {
   background-image: url("../assets/mens_outwear/img15.jpg");
 }
-.mens_outwear_img16{
-    background-image: url('../assets/mens_outwear/img16.jpg');
+.mens_outwear_img16 {
+  background-image: url("../assets/mens_outwear/img16.jpg");
 }
 
-#image{
+#image {
   background-position: center;
   height: 50vh;
   background-repeat: no-repeat;
   width: 100%;
 }
 
-.mens_outwear_data1{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    height: 65vh;
+.mens_outwear_data1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 65vh;
+}
+
+@media (max-width: 900px) {
+}
+@media (max-width: 764px) {
+  .mens_footwear_images {
+    grid-template-columns: 1fr 1fr;
+  }
 }

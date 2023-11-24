@@ -3,7 +3,7 @@ const Ladies_Outwear = () => {
   return (
     <>
       <div className="outwear">
-        <div className="ladies_outwear_img"></div>
+        <div className="ladies_outwear_img img_common"></div>
         <div className="">Ladies Outerwear</div>
         <div>(6 items)</div>
       </div>

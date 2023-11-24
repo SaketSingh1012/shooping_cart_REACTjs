@@ -73,7 +73,7 @@ const HomepageContent = () => {
   return (
     <>
       <div className="outwear">
-        <div className="mens_outwear_img"></div>
+        <div className="mens_outwear_img img_common"></div>
         <div>Men&apos;s Outerwear</div>
         <div>
           <Link to="/mens_outerwear">
@@ -82,7 +82,7 @@ const HomepageContent = () => {
         </div>
       </div>
       <div className="outwear">
-        <div className="ladies_outwear_img"></div>
+        <div className="ladies_outwear_img img_common"></div>
         <div>Ladies Outerwear</div>
         <div>
           <Link to="/ladies_outerwear">
@@ -92,7 +92,7 @@ const HomepageContent = () => {
       </div>
       <div className="t-shirt">
         <div className="outwear">
-          <div className="mens_t-shirt_img"></div>
+          <div className="mens_t-shirt_img img_common"></div>
           <div>Men T-Shirts</div>
           <div>
             <Link to="/mens_t_shirts">
@@ -101,7 +101,7 @@ const HomepageContent = () => {
           </div>
         </div>
         <div className="outwear">
-          <div className="ladies_t-shirt_img"></div>
+          <div className="ladies_t-shirt_img img_common"></div>
           <div>Ladies T-Shirts</div>
           <div>
             <Link to="/ladies_t_shirts">

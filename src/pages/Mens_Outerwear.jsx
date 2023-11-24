@@ -3,7 +3,7 @@ const Mens_Outerwear = () => {
   return (
     <>
       <div className="outwear">
-        <div className="mens_outwear_img"></div>
+        <div className="mens_outwear_img img_common"></div>
         <div className="">Men&apos;s Outerwear</div>
         <div>(15 items)</div>
       </div>

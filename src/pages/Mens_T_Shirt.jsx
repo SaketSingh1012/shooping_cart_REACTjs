@@ -4,7 +4,7 @@ const Mens_T_Shirt = () => {
   return (
     <>
       <div className="outwear">
-        <div className="mens_t-shirt_img"></div>
+        <div className="mens_t-shirt_img img_common"></div>
         <div>Men&apos;s T-Shirts</div>
         <div>(40 items)</div>
       </div>
