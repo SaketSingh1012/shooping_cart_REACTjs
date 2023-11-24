@@ -1,0 +1,82 @@
+.mens_footwear_images {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+}
+
+.mens_outwear_img1 {
+  background-image: url("../assets/mens_outwear/img1.jpg");
+}
+
+.mens_outwear_img2 {
+  background-image: url("../assets/mens_outwear/img2.jpg");
+}
+
+.mens_outwear_img3 {
+  background-image: url("../assets/mens_outwear/img3.jpg");
+}
+
+.mens_outwear_img4 {
+  background-image: url("../assets/mens_outwear/img4.jpg");
+}
+
+.mens_outwear_img5 {
+  background-image: url("../assets/mens_outwear/img5.jpg");
+}
+
+.mens_outwear_img6 {
+  background-image: url("../assets/mens_outwear/img6.jpg");
+}
+
+.mens_outwear_img7 {
+  background-image: url("../assets/mens_outwear/img7.jpg");
+}
+
+.mens_outwear_img8 {
+  background-image: url("../assets/mens_outwear/img8.jpg");
+}
+
+.mens_outwear_img9 {
+  background-image: url("../assets/mens_outwear/img9.jpg");
+}
+.mens_outwear_img10 {
+  background-image: url("../assets/mens_outwear/img10.jpg");
+}
+
+.mens_outwear_img11 {
+  background-image: url("../assets/mens_outwear/img11.jpg");
+}
+
+.mens_outwear_img12 {
+  background-image: url("../assets/mens_outwear/img12.jpg");
+}
+
+.mens_outwear_img13 {
+  background-image: url("../assets/mens_outwear/img13.jpg");
+}
+
+.mens_outwear_img14 {
+  background-image: url("../assets/mens_outwear/img14.jpg");
+}
+
+.mens_outwear_img15 {
+  background-image: url("../assets/mens_outwear/img15.jpg");
+}
+.mens_outwear_img16{
+    background-image: url('../assets/mens_outwear/img16.jpg');
+}
+
+#image{
+  background-position: center;
+  height: 50vh;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.mens_outwear_data1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 65vh;
+}

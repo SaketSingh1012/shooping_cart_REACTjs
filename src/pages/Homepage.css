@@ -1,0 +1,93 @@
+.Home_Head {
+  width: 100%;
+  font-size: 1.4rem;
+  margin-top: 1.4rem;
+  margin-bottom: 2.5rem;
+  display: flex;
+}
+
+.shop {
+  width: 50%;
+  text-align: center;
+  padding-left: 30%;
+}
+
+.cart_image {
+  background-image: url("../assets/cart.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  width: 50%;
+  height: 5vh;
+}
+
+.Home_navbar {
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  padding: 0 30%;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.outwear {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 70vh;
+  align-items: center;
+}
+
+.mens_outwear_img {
+  background-image: url("../assets/mens_outerwear.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 50vh;
+  width: 100%;
+}
+
+.ladies_outwear_img {
+  background-image: url("../assets/ladies_outerwear.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 50vh;
+  width: 100%;
+}
+
+.t-shirt{
+    display: flex;
+    flex-direction: row;
+    height: 70vh;
+    width: 100%;
+}
+
+.mens_t-shirt_img
+{
+    background-image: url('../assets/mens_tshirts.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+    width: 100%;
+}
+
+.ladies_t-shirt_img{
+    background-image: url('../assets/ladies_tshirts.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+    width: 100%;
+}
+
+.link {
+  text-decoration: none;
+  color: black; /* Set the default color for links */
+  margin-right: 20px; /* Adjust as needed */
+}
+
+.link:hover {
+  color: grey; /* Set the color for links on hover */
+}
+
+.activeLink {
+  border-bottom: 2px solid black; /* Add a line below the active link */
+}
