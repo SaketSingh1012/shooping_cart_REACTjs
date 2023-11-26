@@ -1,165 +1,54 @@
+import AddToCartButton from "./AddToCartButton";
 import "./Ladies_T_Shirt.css";
+
+const productData = [
+  { name: "Ladies Chrome T-Shirt", price: 13.3 },
+  { name: "Ladies Google New York T-Shirt", price: 18.35 },
+  { name: "Ladies Gmail T-Shirt", price: 16.4 },
+  { name: "Ladies G Logo White T-Shirt", price: 13.3 },
+  { name: "Ladies Android Pride T-Shirt", price: 19.1 },
+  { name: "Ladies Ringspun Crew Neck", price: 19.7 },
+  { name: "Ladies Tri-Blend V-Neck T-Shirt", price: 35.1 },
+  { name: "Bella Ladies Favorite Tee", price: 10.5 },
+  { name: "Ladies Bamboo T-Shirt", price: 20.65 },
+  { name: "L/S Colorblock Raglan", price: 36.95 },
+  { name: "Bella Scoop-Neck Ladies T-Shirt", price: 13.1 },
+  { name: "Ladies Not For Sale T-Shirt", price: 24.0 },
+  { name: "Ladies Android L/S Stretch T-Shirt", price: 20.0 },
+  { name: "Ladies Mountain View T-Shirt", price: 17.5 },
+  { name: "Ladies Blueprint for a Better Inbox T-Shirt", price: 14.3 },
+  { name: "Cotton Poly w/ Thermal Tee", price: 15.15 },
+  { name: "Ladies YouTube Favorite Tee", price: 11.1 },
+  { name: "MTV Ladies Yellow T-Shirt", price: 16.9 },
+  { name: "Women's Android Heart T-Shirt", price: 10.6 },
+];
+
 const Ladies_T_Shirt = () => {
   return (
     <>
       <div className="outwear">
         <div className="ladies_t-shirt_img img_common"></div>
         <div>Ladies T-Shirts</div>
-        <div>(19 items)</div>
+        <div>({productData.length} items)</div>
       </div>
       <div className="mens_footwear_images">
-        <div className="mens_outwear_data1">
-          <div className="ladies_t_shirt_img1" id="image"></div>
-          <div>Ladies Chrome T-Shirt</div>
-          <div>$13.30</div>
-          <div>
-            <button>ADD TO CART</button>
+        {productData.map((product, index) => (
+          <div className="mens_outwear_data1" key={index}>
+            <div
+              className={`ladies_t_shirt_img${index + 1}`}
+              id={`image`}
+            ></div>
+            <div>{product.name}</div>
+            <div>${product.price}</div>
+            <div>
+              <AddToCartButton
+                itemImage={`ladies_t_shirt_img${index + 1}`}
+                itemName={product.name}
+                itemPrice={product.price}
+              />{" "}
+            </div>
           </div>
-        </div>
-        <div className="mens_outwear_data1">
-          <div className="ladies_t_shirt_img2" id="image"></div>
-          <div>Ladies Google New York T-Shirt</div>
-          <div>$18.35</div>
-          <div>
-            <button>ADD TO CART</button>
-          </div>
-        </div>
-        <div className="mens_outwear_data1">
-          <div className="ladies_t_shirt_img3" id="image"></div>
-          <div>Ladies Gmail T-Shirt</div>
-          <div>$16.40</div>
-          <div>
-            <button>ADD TO CART</button>
-          </div>
-        </div>
-        <div className="mens_outwear_data1">
-          <div className="ladies_t_shirt_img4" id="image"></div>
-          <div>Ladies G Logo White T-Shirt</div>
-          <div>$13.30</div>
-          <div>
-            <button>ADD TO CART</button>
-          </div>
-        </div>
-        <div className="mens_outwear_data1">
-          <div className="ladies_t_shirt_img5" id="image"></div>
-          <div>Ladies Android Pride T-Shirt</div>
-          <div>$19.10</div>
-          <div>
-            <button>ADD TO CART</button>
-          </div>
-        </div>
-        <div className="mens_outwear_data1">
-          <div className="ladies_t_shirt_img6" id="image"></div>
-          <div>Ladies Ringspun Crew Neck</div>
-          <div>$19.70</div>
-          <div>
-            <button>ADD TO CART</button>
-          </div>
-        </div>
-        <div className="mens_outwear_data1">
-          <div className="ladies_t_shirt_img7" id="image"></div>
-          <div>Ladies Tri-Blend V-Neck T-Shirt</div>
-          <div>$35.10</div>
-          <div>
-            <button>ADD TO CART</button>
-          </div>
-        </div>
-        <div className="mens_outwear_data1">
-          <div className="ladies_t_shirt_img8" id="image"></div>
-          <div>Bella Ladies Favorite Tee</div>
-          <div>$10.50</div>
-          <div>
-            <button>ADD TO CART</button>
-          </div>
-        </div>
-        <div className="mens_outwear_data1">
-          <div className="ladies_t_shirt_img9" id="image"></div>
-          <div>Ladies Bamboo T-Shirt</div>
-          <div>$20.65</div>
-          <div>
-            <button>ADD TO CART</button>
-          </div>
-        </div>
-        <div className="mens_outwear_data1">
-          <div className="ladies_t_shirt_img10" id="image"></div>
-          <div>Ladies L/S Colorblock Raglan</div>
-          <div>$36.95</div>
-          <div>
-            <button>ADD TO CART</button>
-          </div>
-        </div>
-        <div className="mens_outwear_data1">
-          <div className="ladies_t_shirt_img11" id="image"></div>
-          <div>Bella Scoop-Neck Ladies T-Shirt</div>
-          <div>$13.10</div>
-          <div>
-            <button>ADD TO CART</button>
-          </div>
-        </div>
-        <div className="mens_outwear_data1">
-          <div className="ladies_t_shirt_img12" id="image"></div>
-          <div>Ladies Not For Sale T-Shirt</div>
-          <div>$24.00</div>
-          <div>
-            <button>ADD TO CART</button>
-          </div>
-        </div>
-        <div className="mens_outwear_data1">
-          <div className="ladies_t_shirt_img13" id="image"></div>
-          <div>Ladies Android L/S Stretch T-Shirt</div>
-          <div>$20.00</div>
-          <div>
-            <button>ADD TO CART</button>
-          </div>
-        </div>
-        <div className="mens_outwear_data1">
-          <div className="ladies_t_shirt_img14" id="image"></div>
-          <div>Ladies Mountain View T-Shirt</div>
-          <div>$17.50</div>
-          <div>
-            <button>ADD TO CART</button>
-          </div>
-        </div>
-        <div className="mens_outwear_data1">
-          <div className="ladies_t_shirt_img15" id="image"></div>
-          <div>Ladies Blueprint for a Better Inbox T-Shirt</div>
-          <div>$14.30</div>
-          <div>
-            <button>ADD TO CART</button>
-          </div>
-        </div>
-        <div className="mens_outwear_data1">
-          <div className="ladies_t_shirt_img16" id="image"></div>
-          <div>Ladies Cotton Poly w/ Thermal Tee</div>
-          <div>$15.15</div>
-          <div>
-            <button>ADD TO CART</button>
-          </div>
-        </div>
-        <div className="mens_outwear_data1">
-          <div className="ladies_t_shirt_img17" id="image"></div>
-          <div>Ladies YouTube Favorite Tee</div>
-          <div>$11.10</div>
-          <div>
-            <button>ADD TO CART</button>
-          </div>
-        </div>
-        <div className="mens_outwear_data1">
-          <div className="ladies_t_shirt_img18" id="image"></div>
-          <div>MTV Ladies Yellow T-Shirt</div>
-          <div>$16.90</div>
-          <div>
-            <button>ADD TO CART</button>
-          </div>
-        </div>
-        <div className="mens_outwear_data1">
-          <div className="ladies_t_shirt_img19" id="image"></div>
-          <div>Women&apos;s Android Heart T-Shirt</div>
-          <div>$10.60</div>
-          <div>
-            <button>ADD TO CART</button>
-          </div>
-        </div>
+        ))}
       </div>
     </>
   );

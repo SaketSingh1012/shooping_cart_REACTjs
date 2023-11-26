@@ -7,16 +7,16 @@
 }
 
 .shop {
-  width: 50%;
+  width: 70%;
   text-align: center;
-  padding-left: 30%;
+  padding-left: 15%;
 }
 
 .cart_image {
   background-image: url("../assets/cart.png");
   background-repeat: no-repeat;
   background-position: right;
-  width: 50%;
+  width: 10%;
   height: 5vh;
 }
 

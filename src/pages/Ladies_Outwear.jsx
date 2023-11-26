@@ -1,61 +1,41 @@
+import AddToCartButton from "./AddToCartButton";
 import "./Ladies_Outwear.css";
+
+const productData = [
+  { name: "Ladies Modern Stretch Full Zip", price: 41.6 },
+  { name: "Ladies Colorblock Wind Jacket", price: 45.9 },
+  { name: "Ladies Voyage Fleece Jacket", price: 48.0 },
+  { name: "Ladies Pullover L/S Hood", price: 36.5 },
+  { name: "Ladies Sonoma Hybrid Knit Jacket", price: 84.85 },
+  { name: "Ladies Yerba Knit Quarter Zip", price: 64.2 },
+];
+
 const Ladies_Outwear = () => {
   return (
     <>
       <div className="outwear">
         <div className="ladies_outwear_img img_common"></div>
         <div className="">Ladies Outerwear</div>
-        <div>(6 items)</div>
+        <div>({productData.length} items)</div>
       </div>
       <div className="mens_footwear_images">
-        <div className="mens_outwear_data1">
-          <div className="ladies_outwear_img1" id="image"></div>
-          <div>Ladies Modern Stretch Full Zip</div>
-          <div>$41.60</div>
-          <div>
-            <button>ADD TO CART</button>
+        {productData.map((product, index) => (
+          <div className="mens_outwear_data1" key={index}>
+            <div
+              className={`ladies_outwear_img${index + 1}`}
+              id={`image`}
+            ></div>
+            <div>{product.name}</div>
+            <div>${product.price}</div>
+            <div>
+              <AddToCartButton
+                itemImage={`ladies_outwear_img${index + 1}`}
+                itemName={product.name}
+                itemPrice={product.price}
+              />
+            </div>
           </div>
-        </div>
-        <div className="mens_outwear_data1">
-          <div className="ladies_outwear_img2" id="image"></div>
-          <div>Ladies Colorblock Wind Jacket</div>
-          <div>$45.90</div>
-          <div>
-            <button>ADD TO CART</button>
-          </div>
-        </div>
-        <div className="mens_outwear_data1">
-          <div className="ladies_outwear_img3" id="image"></div>
-          <div>Ladies Voyage Fleece Jacket</div>
-          <div>$48.00</div>
-          <div>
-            <button>ADD TO CART</button>
-          </div>
-        </div>
-        <div className="mens_outwear_data1">
-          <div className="ladies_outwear_img4" id="image"></div>
-          <div>Ladies Pullover L/S Hood</div>
-          <div>$36.50</div>
-          <div>
-            <button>ADD TO CART</button>
-          </div>
-        </div>
-        <div className="mens_outwear_data1">
-          <div className="ladies_outwear_img5" id="image"></div>
-          <div>Ladies Sonoma Hybrid Knit Jacket</div>
-          <div>$84.85</div>
-          <div>
-            <button>ADD TO CART</button>
-          </div>
-        </div>
-        <div className="mens_outwear_data1">
-          <div className="ladies_outwear_img6" id="image"></div>
-          <div>Ladies Yerba Knit Quarter Zip</div>
-          <div>$64.20</div>
-          <div>
-            <button>ADD TO CART</button>
-          </div>
-        </div>
+        ))}
       </div>
     </>
   );
