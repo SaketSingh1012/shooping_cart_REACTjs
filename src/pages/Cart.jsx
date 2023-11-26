@@ -11,7 +11,7 @@ const Cart = () => {
 
   return (
     <div className="cart">
-      <h2>Your Cart</h2>
+      <h2 className="cart_head">Your Cart</h2>
       {cart.items.map((item, index) => (
         <div key={index} className="cart-item">
           <div className={`image-cart ${item.image}`} id="image"></div>
@@ -25,7 +25,7 @@ const Cart = () => {
         </div>
       ))}
       <footer className="total-price">
-        <strong>Total Price:</strong> ${totalPrice.toFixed(2)}
+        <strong>Total Price:${totalPrice.toFixed(2)}</strong>
       </footer>
     </div>
   );

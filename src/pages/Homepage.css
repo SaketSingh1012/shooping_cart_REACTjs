@@ -29,6 +29,11 @@
   margin-bottom: 1rem;
 }
 
+/* Added styles for hiding and showing Home_navbar */
+.Home_navbar.hidden {
+  display: none;
+}
+
 .outwear {
   display: flex;
   flex-direction: column;
@@ -107,4 +112,5 @@
   }
 }
 @media (max-width: 764px) {
+  /* Add styles for smaller screens if needed */
 }

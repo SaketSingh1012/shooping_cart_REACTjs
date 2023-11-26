@@ -1,11 +1,5 @@
 import { useState } from "react";
-import {
-  BrowserRouter as Router,
-  NavLink,
-  Link,
-  Route,
-  Routes,
-} from "react-router-dom";
+import { BrowserRouter as Router, NavLink, Link, Route, Routes } from "react-router-dom";
 import "./Homepage.css";
 import Mens_Outerwear from "./Mens_Outerwear";
 import Ladies_Outwear from "./Ladies_Outwear";
@@ -16,9 +10,15 @@ import { CartProvider } from "./CartContext";
 
 const Homepage = () => {
   const [activeLink, setActiveLink] = useState("");
+  const [cartLinkActive, setCartLinkActive] = useState(false);
 
   const handleNavLinkClick = (link) => {
     setActiveLink(link);
+    setCartLinkActive(false);
+  };
+
+  const handleCartLinkClick = () => {
+    setCartLinkActive(true);
   };
 
   return (
@@ -28,52 +28,47 @@ const Homepage = () => {
           <div className="Home_Head">
             <NavLink
               to="/"
-              className={`shop link ${activeLink === "home"}`}
+              className={`shop link ` }
               onClick={() => handleNavLinkClick("home")}
             >
               SHOP
             </NavLink>
-            <Link to="/cart" className="cart_image"></Link>
+            <Link
+              to="/cart"
+              className={`cart_image`}
+              onClick={handleCartLinkClick}
+            ></Link>
           </div>
-          <div className="Home_navbar">
+          <div className={`Home_navbar ${cartLinkActive ? "hidden" : "visible"}`}>
             <NavLink
               to="/mens_outerwear"
-              className={`link ${
-                activeLink === "mens_outerwear" ? "activeLink" : ""
-              }`}
+              className={`link ${activeLink === "mens_outerwear" ? "activeLink" : ""}`}
               onClick={() => handleNavLinkClick("mens_outerwear")}
             >
               Men&apos;s Outerwear
             </NavLink>
             <NavLink
               to="/ladies_outerwear"
-              className={`link ${
-                activeLink === "ladies_outerwear" ? "activeLink" : ""
-              }`}
+              className={`link ${activeLink === "ladies_outerwear" ? "activeLink" : ""}`}
               onClick={() => handleNavLinkClick("ladies_outerwear")}
             >
               Ladies Outerwear
             </NavLink>
             <NavLink
               to="/mens_t_shirts"
-              className={`link ${
-                activeLink === "mens_t_shirts" ? "activeLink" : ""
-              }`}
+              className={`link ${activeLink === "mens_t_shirts" ? "activeLink" : ""}`}
               onClick={() => handleNavLinkClick("mens_t_shirts")}
             >
               Men&apos;s T-Shirts
             </NavLink>
             <NavLink
               to="/ladies_t_shirts"
-              className={`link ${
-                activeLink === "ladies_t_shirts" ? "activeLink" : ""
-              }`}
+              className={`link ${activeLink === "ladies_t_shirts" ? "activeLink" : ""}`}
               onClick={() => handleNavLinkClick("ladies_t_shirts")}
             >
               Ladies T-Shirts
             </NavLink>
           </div>
-
           <Routes>
             <Route path="/" element={<HomepageContent />} />
             <Route path="/mens_outerwear" element={<Mens_Outerwear />} />

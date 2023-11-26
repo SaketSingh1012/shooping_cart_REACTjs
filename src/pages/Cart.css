@@ -7,6 +7,10 @@
   width: 100%;
 }
 
+.cart_head{
+  text-align: center;
+}
+
 .image-cart {
   background-position: left;
   width: 30%;
