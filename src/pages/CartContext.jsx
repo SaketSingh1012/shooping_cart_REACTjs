@@ -36,6 +36,24 @@ const cartReducer = (state, action) => {
         ...state,
         items: state.items.filter((item) => item.name !== action.payload.name),
       };
+    case "INCREMENT_QUANTITY":
+      return {
+        ...state,
+        items: state.items.map((item) =>
+          item.name === action.payload.name
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
+        ),
+      };
+    case "DECREMENT_QUANTITY":
+      return {
+        ...state,
+        items: state.items.map((item) =>
+          item.name === action.payload.name
+            ? { ...item, quantity: Math.max(1, item.quantity - 1) }
+            : item
+        ),
+      };
     default:
       return state;
   }
@@ -46,7 +64,11 @@ const useCart = () => {
   if (!context) {
     throw new Error("useCart must be used within a CartProvider");
   }
-  return context;
+  return {
+    ...context,
+    incrementQuantity: (item) => context.dispatch({ type: "INCREMENT_QUANTITY", payload: item }),
+    decrementQuantity: (item) => context.dispatch({ type: "DECREMENT_QUANTITY", payload: item }),
+  };
 };
 
 export const CartProvider = ({ children }) => {
@@ -60,7 +82,15 @@ export const CartProvider = ({ children }) => {
     dispatch({ type: "REMOVE_FROM_CART", payload: item });
   }, []);
 
-  const value = { cart: cartState, addToCart, removeFromCart };
+  const differentItemsCount = cartState.items.length;
+
+  const value = {
+    cart: { ...cartState },
+    addToCart,
+    removeFromCart,
+    differentItemsCount,
+    dispatch,
+  };
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 };

@@ -16,8 +16,20 @@
   background-image: url("../assets/cart.png");
   background-repeat: no-repeat;
   background-position: right;
-  width: 10%;
-  height: 5vh;
+  width: 15%;
+  height: 6vh;
+  position: relative;
+}
+
+.cart_count {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color:rgb(25, 25, 65);
+  color: white;
+  border-radius: 50%;
+  padding: 4px 8px;
+  font-size: 0.5rem;
 }
 
 .Home_navbar {
@@ -29,7 +41,6 @@
   margin-bottom: 1rem;
 }
 
-/* Added styles for hiding and showing Home_navbar */
 .Home_navbar.hidden {
   display: none;
 }
@@ -112,5 +123,4 @@
   }
 }
 @media (max-width: 764px) {
-  /* Add styles for smaller screens if needed */
 }
